@@ -16,7 +16,7 @@
 
 
 // Override theme settings (see ../template/settings.scss)
-$backgroundColor: #222;
+$backgroundColor: #000;
 
 $mainColor: #fff;
 $headingColor: #fff;
@@ -26,7 +26,7 @@ $mainFont: 'Source Sans Pro', Helvetica, sans-serif;
 $headingFont: 'Source Sans Pro', Helvetica, sans-serif;
 $headingTextShadow: none;
 $headingLetterSpacing: normal;
-$headingTextTransform: uppercase;
+$headingTextTransform: normal;
 $headingFontWeight: 600;
 $linkColor: #42affa;
 $linkColorHover: lighten( $linkColor, 15% );

@@ -3,15 +3,10 @@
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-
-		<title>reveal.js</title>
-
+		<title>在2016年做前端开发是什么样的体验</title>
 		<link rel="stylesheet" href="css/reveal.css">
 		<link rel="stylesheet" href="css/theme/black.css">
-
-		<!-- Theme used for syntax highlighting of code -->
 		<link rel="stylesheet" href="lib/css/zenburn.css">
-
 		<!-- Printing and PDF exports -->
 		<script>
 			var link = document.createElement( 'link' );
@@ -20,30 +15,77 @@
 			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
 			document.getElementsByTagName( 'head' )[0].appendChild( link );
 		</script>
+        <style type="text/css">
+            iframe {
+                background: #fff;
+            }
+            .reveal section img {
+                border:none;
+                background: #000;
+            }
+        </style>
 	</head>
 	<body>
 		<div class="reveal">
 			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
+				<section data-markdown="slides/1.md" data-separator="^\n---\n$" data-separator-vertical="^\n--\n$" data-separator-notes="^Note:">
+                </section>
+				<section data-markdown="slides/2.md" data-separator="^\n---\n$" data-separator-vertical="^\n--\n$" data-separator-notes="^Note:">
+                </section>
+                <section data-markdown="slides/3.md" data-separator="^\n---\n$" data-separator-vertical="^\n--\n$" data-separator-notes="^Note:">
+                </section>
+                <section data-markdown="slides/4.md" data-separator="^\n---\n$" data-separator-vertical="^\n--\n$" data-separator-notes="^Note:">
+                </section>
+                <section data-markdown="slides/5.md" data-separator="^\n---\n$" data-separator-vertical="^\n--\n$" data-separator-notes="^Note:">
+                </section>
+                <section data-markdown="slides/6.md" data-separator="^\n---\n$" data-separator-vertical="^\n--\n$" data-separator-notes="^Note:">
+                </section>
 			</div>
 		</div>
 
 		<script src="lib/js/head.min.js"></script>
 		<script src="js/reveal.js"></script>
-
 		<script>
-			// More info https://github.com/hakimel/reveal.js#configuration
 			Reveal.initialize({
 				history: true,
 
-				// More info https://github.com/hakimel/reveal.js#dependencies
+                menu: {
+                    transitions: false,
+                    themes:false,
+                    titleSelector: 'h1, h2, h3',
+                    hideMissingTitles: true,
+                },
+                // chalkboard: {
+                //     src: null,
+                //     // readOnly: true,
+                //     toggleChalkboardButton: { left: "80px"},
+                //     toggleNotesButton: { left: "130px" },
+                //     transition: 800,
+                //     theme: "chalkboard",
+                //     // configuration options for notes canvas and chalkboard
+                //     color: [ 'rgba(0,0,255,1)', 'rgba(255,255,255,0.5)' ],
+                //     background: [ 'rgba(127,127,127,.1)' , 'plugin/chalkboard/img/blackboard.png' ],
+                //     pen:  [ 'url(plugin/chalkboard/img/boardmarker.png), auto', 'url(plugin/chalkboard/img/chalk.png), auto' ],
+                // },
 				dependencies: [
+                    { src: 'node_modules/reveal.js-menu/menu.js' },
+                    // { src: 'plugin/chalkboard/chalkboard.js' },
 					{ src: 'plugin/markdown/marked.js' },
 					{ src: 'plugin/markdown/markdown.js' },
 					{ src: 'plugin/notes/notes.js', async: true },
+                    { src: 'plugin/zoom-js/zoom.js', async: true },
 					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
-				]
+				],
+                // keyboard: {
+                //     // toggle notes canvas when 'c' is pressed
+                //     67: function() { RevealChalkboard.toggleNotesCanvas() },
+                //     // toggle chalkboard when 'b' is pressed
+                //     // 66: function() { RevealChalkboard.toggleChalkboard() },
+                //     // clear chalkboard when 'DEL' is pressed
+                //     46: function() { RevealChalkboard.clear() },
+                //     // reset chalkboard data on current slide when 'BACKSPACE' is pressed
+                //      8: function() { RevealChalkboard.reset() },
+                // },
 			});
 		</script>
 	</body>

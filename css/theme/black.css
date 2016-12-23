@@ -11,8 +11,8 @@ section.has-light-background, section.has-light-background h1, section.has-light
  * GLOBAL STYLES
  *********************************************/
 body {
-  background: #222;
-  background-color: #222; }
+  background: #000;
+  background-color: #000; }
 
 .reveal {
   font-family: "Source Sans Pro", Helvetica, sans-serif;
@@ -45,7 +45,7 @@ body {
   font-weight: 600;
   line-height: 1.2;
   letter-spacing: normal;
-  text-transform: uppercase;
+  text-transform: normal;
   text-shadow: none;
   word-wrap: break-word; }
 
@@ -128,7 +128,7 @@ body {
   margin: 20px auto;
   padding: 5px;
   font-style: italic;
-  background: rgba(255, 255, 255, 0.05);
+  background: rgba(51, 51, 51, 0.6);
   box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.2); }
 
 .reveal blockquote p:first-child,
